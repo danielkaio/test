@@ -61,6 +61,8 @@ class Hotel(Resource):
 
         }
         hoteis.append(novo_hotel)
+        return novo_hotel,200
+        
 
   
 
