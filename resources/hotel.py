@@ -24,15 +24,15 @@ class Hotel(Resource):
         for hotel in hoteis:
             if hotel['hotel_id'] == hotel_id:
                 return hotel
-        return hotel
+        return {"message":"hotel nao encontrado"}
+        
         return None
     
     def get(self,hotel_id):
         hotel = Hotel.find_hotel(hotel_id)
         if hotel:
             return hotel
-        return {"hotel não existe"}
- 
+    
         
     
 
@@ -46,8 +46,6 @@ class Hotel(Resource):
 
         novo_hotel = {  'hotel_id':hotel_id,**dados}
            
-            
-       
         hoteis.append(novo_hotel)
         return novo_hotel,200
         
@@ -72,11 +70,9 @@ class Hotel(Resource):
 
             
 
-           
-    
-
-        
   
 
-    def delete(self):
-        pass
+    def delete(self,hotel_id):
+        global hoteis
+        hoteis  = [hotel for hotel in hoteis if hotel ['hotel_id']!= hotel_id]
+        return {'message':"hotel excluido"}
