@@ -3,30 +3,9 @@ from flask_restful import Resource, reqparse
 
 
 hoteis = [
-    {
-        "hotel_id":"bravo",
-        "nome": "alpha_hotel",
-        "estrelas": 4.3,
-        "diaria":4.500,
-        "cidade":"rio de janeiro"
-    },
+   
 
 
-     {
-        "hotel_id":"tela",
-        "nome": "alpha_hotel",
-        "estrelas": 4.3,
-        "diaria":4.500,
-         "cidade":"santos"
-    },
-
-     {
-        "hotel_id":"aranha",
-        "nome": "alpha_hotel",
-        "estrelas": 4.3,
-        "diaria":4.500,
-        "cidade":"barueri"
-    }
 ]
 
 class Hoteis(Resource):
@@ -34,32 +13,41 @@ class Hoteis(Resource):
         return {'Hoteis':hoteis}
 
 class Hotel(Resource):
-    def get(self,hotel_id):
+
+    argumentos = reqparse.RequestParser()
+    argumentos.add_argument('nome')
+    argumentos.add_argument('diaria')
+    argumentos.add_argument('estrelas')
+    argumentos.add_argument('cidade')
+
+    def find_hotel(hotel_id):
         for hotel in hoteis:
-            if hotel["hotel_id"] == hotel_id:
+            if hotel['hotel_id'] == hotel_id:
                 return hotel
-        return {"message":"hotel nao existe"}
-           
+        return hotel
+        return None
+    
+    def get(self,hotel_id):
+        hotel = Hotel.find_hotel(hotel_id)
+        if hotel:
+            return hotel
+        return {"hotel não existe"}
+ 
+        
+    
+
+
+    
 
 
     def post(self,hotel_id):
-        argumentos = reqparse.RequestParser()
-        argumentos.add_argument('nome')
-        argumentos.add_argument('diaria')
-        argumentos.add_argument('estrelas')
-        argumentos.add_argument('cidade')
+       
+        dados = Hotel.argumentos.parse_args()
 
-        dados = argumentos.parse_args()
-
-        novo_hotel = {
-             'hotel_id':hotel_id,
-            'nome':dados['nome'],
-            'diaria':dados[ 'diaria'],
-            'estrelas':dados['estrelas'],
-            'cidade':dados['cidade']
-
-
-        }
+        novo_hotel = {  'hotel_id':hotel_id,**dados}
+           
+            
+       
         hoteis.append(novo_hotel)
         return novo_hotel,200
         
@@ -71,8 +59,24 @@ class Hotel(Resource):
 
 
 
-    def put(self):
-        pass
+    def put(self,hotel_id):
+        dados = Hotel.argumentos.parse_args()
+        novo_hotel = {  'hotel_id':hotel_id,**dados}
+        hotel = Hotel.find_hotel(hotel_id)
+        if hotel  != "":
+            hotel.update(novo_hotel)
+            return novo_hotel,200
+        
+          
+
+
+            
+
+           
+    
+
+        
+  
 
     def delete(self):
         pass

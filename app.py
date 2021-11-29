@@ -10,6 +10,12 @@ app = Flask(__name__)
 api = Api(app)
 
 
+@app.route("/")
+def index():
+    return "lista de hotéis"
+    
+
+
 
 api.add_resource(Hoteis,"/hoteis")
 api.add_resource(Hotel,"/hoteis/<string:hotel_id>")
