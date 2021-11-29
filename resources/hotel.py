@@ -4,7 +4,30 @@ from flask_restful import Resource, reqparse
 
 hoteis = [
    
+   {
+    "hotel_id": "itapevi",
+    "nome": " itapevi",
+    "diaria": "5.9",
+    "estrelas": "2.5",
+    "cidade": "sampa"
+},
 
+{
+    "hotel_id": "santos",
+    "nome": " santos",
+    "diaria": "5.9",
+    "estrelas": "2.5",
+    "cidade": "sampa"
+},
+
+
+{
+    "hotel_id": "bahia",
+    "nome": " bahia",
+    "diaria": "5.9",
+    "estrelas": "2.5",
+    "cidade": "sampa"
+}
 
 ]
 
