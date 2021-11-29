@@ -5,8 +5,6 @@ from resources.hotel import Hoteis, Hotel
 
 app = Flask(__name__)
 
-
-
 api = Api(app)
 
 
