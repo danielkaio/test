@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import   Api
-from resources.hotel import Hoteis, Hotel
+from resources.pessoa import Pessoa, Pessoas
 
 
 app = Flask(__name__)
@@ -15,8 +15,8 @@ def index():
 
 
 
-api.add_resource(Hoteis,"/hoteis")
-api.add_resource(Hotel,"/hoteis/<string:hotel_id>")
+api.add_resource(Pessoas,"/pessoas")
+api.add_resource(Pessoa,"/pessoas/<string:cpf_id>")
 
 if __name__ == "__main__":
     app.run(debug=True)
