@@ -5,9 +5,9 @@ from flask_restful import Resource, reqparse
 pessoas = [
    
    {
-    "cpf_id": "itapevi",
-    "nome": " itapevi",
-    "endereco":"dddd"
+    "cpf_id": "80356037878",
+    "nome": "daniel",
+    "endereco":"Avenida Alagoas 187-B"
     
 },
 
@@ -41,11 +41,6 @@ class Pessoa(Resource):
             return pessoa
     
         
-    
-
-
-    
-
 
     def post(self,cpf_id):
        
@@ -58,8 +53,6 @@ class Pessoa(Resource):
         
 
   
-    
-
     def put(self,cpf_id):
         dados = Pessoa.argumentos.parse_args()
         nova_pessoa = {  'cpf_id':cpf_id,**dados}
@@ -69,11 +62,6 @@ class Pessoa(Resource):
             return nova_pessoa,200
         
           
-
-
-            
-
-  
 
     def delete(self,cpf_id):
         global pessoas

@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/daniel/Área de Trabalho/api-rest/api/bin/python3" "$0" "$@"
+'''exec' "/home/daniel/Área de Trabalho/test/api/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

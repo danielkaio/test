@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "6c4c9534-0727-4a54-a722-ba8d24e2b0d1",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15165984"
+	},
+	"item": [
+		{
+			"name": "remove-usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n            \"cpf\": \"457\",\n            \"nome\": \" dev \",\n            \"endereco\": \"ova\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/pessoas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista-usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pessoas",
+						"itapevi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busca-usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pessoas",
+						"itapevi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza-usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf_id\": \"itapevi\",\n    \"nome\": \" dev \",\n    \"cpf\": \"457\",\n   \"endereco\": \"ova\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pessoas",
+						"itapevi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"cpf\": \"80356037878\",\n            \"nome\": \"daniel\",\n            \"endereco\": \"Avenida Alagoas 187-B\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/pessoas/80356037878",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pessoas",
+						"80356037878"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -10,7 +10,7 @@ api = Api(app)
 
 @app.route("/")
 def index():
-    return "lista de hotéis"
+    return "lista de usuarios"
     
 
 
