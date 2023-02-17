@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6c4c9534-0727-4a54-a722-ba8d24e2b0d1",
+		"_postman_id": "234a92a6-5979-4e99-8e86-bab5ac6b3286",
 		"name": "test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15165984"
@@ -21,17 +21,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/pessoas",
+					"raw": "http://172.17.0.2:5000/pessoas/80356037876",
 					"protocol": "http",
 					"host": [
-						"127",
+						"172",
+						"17",
 						"0",
-						"0",
-						"1"
+						"2"
 					],
 					"port": "5000",
 					"path": [
-						"pessoas"
+						"pessoas",
+						"80356037876"
 					]
 				}
 			},
@@ -43,18 +44,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"raw": "http://172.17.0.2:5000/pessoas",
 					"protocol": "http",
 					"host": [
-						"127",
+						"172",
+						"17",
 						"0",
-						"0",
-						"1"
+						"2"
 					],
 					"port": "5000",
 					"path": [
-						"pessoas",
-						"itapevi"
+						"pessoas"
 					]
 				}
 			},
@@ -66,18 +66,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"raw": "http://172.17.0.2:5000/pessoas/80356037878",
 					"protocol": "http",
 					"host": [
-						"127",
+						"172",
+						"17",
 						"0",
-						"0",
-						"1"
+						"2"
 					],
 					"port": "5000",
 					"path": [
 						"pessoas",
-						"itapevi"
+						"80356037878"
 					]
 				}
 			},
@@ -90,7 +90,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"cpf_id\": \"itapevi\",\n    \"nome\": \" dev \",\n    \"cpf\": \"457\",\n   \"endereco\": \"ova\"\n\n}",
+					"raw": "{\n    \"cpf_id\": \"itapevi\",\n    \"nome\": \" marta \",\n    \"cpf\": \"457\",\n   \"endereco\": \"ova\"\n\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -98,18 +98,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/pessoas/itapevi",
+					"raw": "http://172.17.0.2:5000/pessoas/80356037878",
 					"protocol": "http",
 					"host": [
-						"127",
+						"172",
+						"17",
 						"0",
-						"0",
-						"1"
+						"2"
 					],
 					"port": "5000",
 					"path": [
 						"pessoas",
-						"itapevi"
+						"80356037878"
 					]
 				}
 			},
@@ -122,7 +122,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "        {\n            \"cpf\": \"80356037878\",\n            \"nome\": \"daniel\",\n            \"endereco\": \"Avenida Alagoas 187-B\"\n        }",
+					"raw": "        {\n            \"cpf\": \"80356037879\",\n            \"nome\": \"joao\",\n            \"endereco\": \"Avenida Alagoas 187-B\"\n        }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -130,18 +130,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/pessoas/80356037878",
+					"raw": "http://172.17.0.2:5000/pessoas/80356037876",
 					"protocol": "http",
 					"host": [
-						"127",
+						"172",
+						"17",
 						"0",
-						"0",
-						"1"
+						"2"
 					],
 					"port": "5000",
 					"path": [
 						"pessoas",
-						"80356037878"
+						"80356037876"
 					]
 				}
 			},

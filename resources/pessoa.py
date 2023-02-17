@@ -31,23 +31,22 @@ class Pessoa(Resource):
         for pessoa in pessoas:
             if pessoa['cpf_id'] == cpf_id:
                 return pessoa
-        return {"message":"hotel nao encontrado"}
+        return {"message":"pessoa nao encontrado"}
         
-        return None
+     
     
     def get(self,cpf_id):
         pessoa = Pessoa.find_pessoa(cpf_id)
         if pessoa:
             return pessoa
+        
     
         
 
     def post(self,cpf_id):
-       
-        dados = Pessoa.argumentos.parse_args()
 
+        dados = Pessoa.argumentos.parse_args()
         nova_pessoa = {  'cpf_id':cpf_id,**dados}
-           
         pessoas.append(nova_pessoa)
         return nova_pessoa,200
         
